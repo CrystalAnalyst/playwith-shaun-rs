@@ -1,6 +1,6 @@
 use super::keyword::Keyword;
 
-#[derive(PartialEq, Eq, PartialOrd, Ord, Debug)]
+#[derive(PartialEq, Eq, PartialOrd, Ord, Debug, Hash, Clone)]
 pub enum Token {
     Number(String),     // 数字
     String(String),     // 字符串, 'xxx' "xxx"
@@ -63,8 +63,4 @@ impl std::fmt::Display for Token {
             }
         )
     }
-}
-
-pub fn print_hello_world() {
-    println!("hello, world!");
 }
